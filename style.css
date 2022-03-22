@@ -148,6 +148,12 @@ h1 {
     border: 3px solid rgb(168, 20, 12);
 }
 
+#next {
+    display: none;
+    text-align: right;
+    width: 40%;
+}
+
 /*********** POPUP SCREEN *********/
 #popup-screen {
     display : none;

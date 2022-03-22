@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <!-- javascript-->
+        <script src='main.js' type='text/javascript'></script>
+</head>
+
+<body onload= 'confirmAppt()'>
+    <!-- Display for Main Page -->
+    <header>
+        <h1>CMU Health Connect</h1>
+        <div id='success'> <b>Success! You have booked an appointment. </b></div>
+
+        <img src='progress3.png' alt='progress bar' width=300px>
+
+        
+        <h3>Please confirm the appointment date and time.</h3>
+    </header>
+    <div >
+        <p id='after-colon1'> </p>
+        <p id='after-colon2'> Visit:</p>
+    </div>
+    
+    <!-- 1 row 3 col -->
+    <div class='wrapper'>
+        <!--Barcode Col-->
+        <div>
+            <h3>Present this barcode </br> to check in at site:</h3>
+            <img src='qrcode.png' alt='qrcode' class='center-smallimg'>
+        </div>
+        <!--Action Buttons -->
+        <div>
+            <div id='action-button'>
+                <button class='button button-act'> Cancel Appt</button>
+                <button class='button button-act'> Reschedule </button>
+                <button class='button button-act'> Confirm </button>
+            </div>
+        </div>
+        <!--Note Col-->
+        <div>
+            <h3 class=' red bold'> If you do not keep your appointment or cancel 
+                less than 24 hours in advance, you will be charged a $10 missed appointment fee.</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

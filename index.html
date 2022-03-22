@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <!-- javascript-->
+        <script src='main.js' type='text/javascript'></script>
+</head>
+
+<body>
+    <!-- Display for Main Page -->
+    <header>
+        <h1>CMU Health Connect</h1>
+        <img src='progress1.png' alt='progress bar' width=300px>
+        <h2>Schedule a COVID-19 Test</h2>
+        <h3>Log in to get started.</h3>
+       
+    </header>
+
+    <!--Forms to fill out Login username and password -->
+    <div id='userpw'>
+        <div class='userpw'>
+            <form action="appointments.html" method="GET">
+                <label for="username">Username:</label>
+                <br>
+                    <input id="username" name="username" type="text" required minlength="3" maxlength="15">
+                <br>
+                <label for="pw">Password:</label>
+                <br>
+                <!--Pattern attribute to input -->
+                        <input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+                <br>
+        </div>
+    </div>
+
+    <!-- Clicking the login button takes you to the next page (Appointments)-->
+    <div id="login">
+        <div class="login">
+            <a href="appointments.html">Login</a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

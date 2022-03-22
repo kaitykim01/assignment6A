@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <!-- javascript-->
+        <script src='main.js' type='text/javascript'></script>
+</head>
+
+<body>
+    <header>
+        <h1>CMU Health Connect</h1>
+        <!-- Image of Progress bar... I don't really know how to code the images-->
+        <img src='progress2.png' alt='progress bar' width=300px>
+        <h2>Select a Date</h2>
+    </header>
+
+    <!-- Appointment Buttons-->
+    <div id="appt-times">
+        <!-- Select Monday to view the popup date-->
+        <button class='button' onclick='showPopup("Monday Jan 10th" , ["10:00am", "10:40am", "11:00am"])'> Monday <br />Jan 10th <br /><sub>3 appts</sub></button> 
+        <button class='button' onclick='showPopup("Tuesday Jan 11th", ["9:00am", "10:00am", "10:15am", "10:30am", "11:30am"])'> Tuesday <br />Jan 11th <br /><sub>5 appts</sub></button>
+        <button class='button' onclick='showPopup("Wednesday Jan 12th", ["8:00am", "8:15am", "9:30am"])'> Wednesday <br />Jan 12th <br /><sub>3 appts</sub></button>
+        <button class='button' onclick='showPopup("Thursday Jan 13th", ["8:00am", "8:15am", "8:30am"])'> Thursday <br />Jan 13th <br /><sub>3 appts</sub></button>
+        <button class='button' onclick='showPopup("Friday Jan 14th", ["9:00am", "9:15am", "9:45am", "10:00am", "12:00pm"])'> Friday <br />Jan 14th <br /><sub>5 appts</sub></button>
+        <button class='button' onclick='showPopup("Saturday Jan 15th", ["8:00am", "8:30am", "8:45am", "9:15am", "10:30am"])'> Saturday <br />Jan 15th <br /><sub>5 appts</sub></button>
+        <button class='button' onclick='showPopup("Sunday Jan 16th", ["8:00am", "9:30am"])'> Sunday <br />Jan 16th <br /><sub>2 appts</sub></button>
+        <button class='button' onclick='showPopup("Monday Jan 17th", ["9:00am", "9:15am", "10:30am"])'> Monday <br />Jan 17th <br /><sub>3 appts</sub></button>
+    </div>
+
+    <!-- Pop up Screen to Book Appointment -->
+    <div id='popup-screen'>
+        <div id='popup'>
+            <div class='row-popup'>
+                <div class='col-popup'>
+                    <h3>Showing appointments for:  </h3>
+                    <h2 class='bold' id='dateBox'> </h2> 
+                    <h3 class='bold center-text'>January 2022</h3>
+                    <!-- Grid Calendar Interactive -->
+                    <div class='daysOfWeek' style="display:grid;text-align: right; grid-template-columns:repeat(7,30px);">
+                            <div>S</div><div>M</div><div>T</div><div>W</div>
+                            <div>Th</div><div>F</div><div>S</div>
+                    </div>
+                    <!-- Clicking a Date on the calendar updates the popup screen date -->
+                    <div class='date' style="display:grid; text-align: right; grid-template-columns:repeat(7,30px);">
+                            <div id='unav'>1</div><div id='unav'>2</div><div id='unav'>3</div><div id='unav'>4</div>
+                            <div id='unav'>5</div><div id='unav'>6</div><div id='unav'>7</div><div id='unav'>8</div><div id='unav'>9</div>
+                            <div onclick='showPopup("Monday Jan 10th", ["10:00am", "10:40am", "11:00am"])'>10</div>
+                            <div onclick='showPopup("Tuesday Jan 11th", ["9:00am", "10:00am", "10:15am", "10:30am", "11:30am"])'>11</div>
+                            <div onclick='showPopup("Wednesday Jan 12th", ["8:00am", "8:15am", "9:30am"])'>12</div>
+                            <div onclick='showPopup("Thursday Jan 13th", ["8:00am", "8:15am", "8:30am"])'>13</div>
+                            <div onclick='showPopup("Friday Jan 14th", ["9:00am", "9:15am", "9:45am", "10:00am", "12:00pm"])'>14</div>
+                            <div onclick='showPopup("Saturday Jan 15th", ["8:00am", "8:30am", "8:45am", "9:15am", "10:30am"])'>15</div>
+                            <div onclick='showPopup("Sunday Jan 16th", ["8:00am", "9:30am"])'>16</div>
+                            <div onclick='showPopup("Monday Jan 17th", ["9:00am", "9:15am", "10:30am"])'>17</div>
+                            <div id='unav'>18</div><div id='unav'>19</div><div id='unav'>20</div><div id='unav'>21</div>
+                            <div id='unav'>22</div><div id='unav'>23</div><div id='unav'>24</div><div id='unav'>25</div>
+                            <div id='unav'>26</div><div id='unav'>27</div><div id='unav'>28</div><div id='unav'>29</div>
+                            <div id='unav'>30</div><div id='unav'>31</div>
+                    </div>
+
+                </div>
+                <div class='col-popup'>
+                    <h3 class='center-text top' > Select a time </h3>
+                    <!-- Available Time Buttons -->
+                    <div id='timeBox'></div>
+
+                    <!-- Book appointment Button -->
+                    <div>
+                        <a href="confirm.html"><button class='button button-book' >Book Appointment</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+        
+
+
+    
+
+   
+    
+
+</body>
+
+</html>

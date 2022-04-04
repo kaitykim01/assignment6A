@@ -98,8 +98,8 @@ h1 {
 }
 
 .button:hover {
-    background-color: #5ee164;
-    border: 3px #90ff96;
+    background-color: #349139;
+    border: 3px #349139;
     color: white;
 }
 
@@ -115,6 +115,13 @@ h1 {
 .button-hrs {
     width: 70%;
 }
+
+.button-hrs:focus {
+    background-color: #349139;
+    border: 3px #349139;
+    color: white;
+ }
+
 
 /*Book an appointment Button */
 .button-book {
@@ -234,6 +241,12 @@ h1 {
     grid-column: 7;
 }
 
+#smallText {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
 /* Unavailable dates on calendar are greyed out*/
 #unav {
     background-color: rgb(185, 185, 185);
@@ -248,7 +261,7 @@ h1 {
 /* Success Notif */
 #success {
     color: white;
-    background-color:  #5ee164;
+    background-color:  #349139;
     padding: 8px;
     text-align: left;
 }
